@@ -487,6 +487,15 @@ def hsidrive_palette():
             [0, 0, 255], [102, 51, 0], [255, 255, 0], [0, 207, 250],
             [255, 166, 0], [0, 204, 204]]
 
+def xbd_classes():
+    return [
+        'no_dmg', 'minor_dmg', 'major_dmg', 'destroyed'
+    ]
+
+def xbd_palette():
+    return [
+        [128, 64, 128], [244, 35, 232], [70, 70, 70], [102, 102, 156]
+    ]
 
 dataset_aliases = {
     'cityscapes': ['cityscapes'],
@@ -510,7 +519,8 @@ dataset_aliases = {
     'hsidrive': [
         'hsidrive', 'HSIDrive', 'HSI-Drive', 'hsidrive20', 'HSIDrive20',
         'HSI-Drive20'
-    ]
+    ],
+    'xbd': ['xbd','xBD']
 }
 
 

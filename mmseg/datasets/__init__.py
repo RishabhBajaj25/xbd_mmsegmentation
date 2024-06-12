@@ -40,6 +40,7 @@ from .transforms import (CLAHE, AdjustGamma, Albu, BioMedical3DPad,
                          ResizeShortestEdge, ResizeToMultiple, RGB2Gray,
                          SegRescale)
 from .voc import PascalVOCDataset
+from .xbd import xBD
 
 # yapf: enable
 __all__ = [
