@@ -56,7 +56,17 @@ English | [简体中文](README_zh-CN.md)
 
 ## Rishabh's MMSegmentation Experiments for xBD dataset
 
-In this forked repo, I use MMSegmentation for a post-disaster building damage assessment from satellite imagery. This project was done for CIVE700: Scientific Machine Learning for Engineers, Spring 2024 offering by Prof. Alana Lund at the University of Waterloo.
+In this forked repo, I use MMSegmentation for a post-disaster building damage assessment from satellite imagery. This project was done for CIVE700: Scientific Machine Learning for Engineers, Spring 2024 offered by Prof. Alana Lund at the University of Waterloo.
+
+### Visualisation Instructions
+
+Since MMSegmentation would be deployed on the Lambda Cloud which is a cloud based service instead of being used on local machines, some instructions are specific and different to the ones found on the original repo. To help visualize the training using Tensorboard, follow these steps:
+1. Add the visual runtime to default_runtime.py as mentioned [here](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/user_guides/visualization.md).
+2. Start training.
+3. SSH into the lambda cloud instance using `ssh -L port_on_local_machine:127.0.0.1:6006 user@IP_of_instance`. For example: `ssh -L 17006:127.0.0.1:6006 ubuntu@138.2.224.225`. **Note**: This will only work on the local machine that was used to register the SSH key for lambda cloud.
+4. Once SSH'ed to the instance. Important: `cd path_to_mmsegmentation`. 
+5. Find the vis_data path of work_dir after starting training, and launch tensorboard. For example: `tensorboard --logdir work_dirs/test_visual/20240621_223051/vis_data/`
+6. On the local machine, launch a web browser and navigate to: (http://127.0.0.1:port_on_local_machine). For example: (http://127.0.0.1:17006).
 
 ## Introduction
 
