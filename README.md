@@ -58,6 +58,14 @@ English | [简体中文](README_zh-CN.md)
 
 In this forked repo, I use MMSegmentation for a post-disaster building damage assessment from satellite imagery. This project was done for CIVE700: Scientific Machine Learning for Engineers, Spring 2024 offered by Prof. Alana Lund at the University of Waterloo.
 
+### Miscellaneous Notes
+Note1: After making changes to add a custom dataset (see [here](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/advanced_guides/add_datasets.md)); update the registry in the mmdetection folder using the following command:
+```
+python setup.py install
+pip install -v -e .
+```
+
+
 ### Visualisation Instructions
 
 Since MMSegmentation would be deployed on the Lambda Cloud which is a cloud based service instead of being used on local machines, some instructions are specific and different to the ones found on the original repo. To help visualize the training using Tensorboard, follow these steps:
